@@ -530,33 +530,7 @@
                 sibling.parentElement.insertBefore( skipLink, sibling );
         }() );
   </script>
-
-
-                // Initialize and attach hovercards to all gravatars
-                ( function() {
-                        function init() {
-                                if ( typeof Gravatar === 'undefined' ) {
-                                        return;
-                                }
-
-                                if ( typeof Gravatar.init !== 'function' ) {
-                                        return;
-                                }
-
-                                Gravatar.profile_cb = function ( hash, id ) {
-                                        WPGroHo.syncProfileData( hash, id );
-                                };
-
-                                Gravatar.my_hash = WPGroHo.my_hash;
-                                Gravatar.init( 'body', '#wp-admin-bar-my-account' );
-                        }
-
-                        if ( document.readyState !== 'loading' ) {
-                                init();
-                        } else {
-                                document.addEventListener( 'DOMContentLoaded', init );
-                        }
-                } )();
+  
   </script>
   <div style="display:none"></div>
   <div id="actionbar" style="display: none;" class="actnbr-pub-blank-canvas-blocks actnbr-has-follow">
