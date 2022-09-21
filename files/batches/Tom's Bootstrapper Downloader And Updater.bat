@@ -2,14 +2,14 @@
 echo If files doesn't appear, don't run as an administrator. Downloading in 3 seconds
 timeout /t 3 /nobreak >nul
 echo Downloading 7z.exe...
-curl https://raw.githubusercontent.com/tomtep01/Tom-s-Bootstrapper-Files/main/7z.exe > 7z.exe
+curl https://raw.githubusercontent.com/tomtep01/Executor/main/files/downloader/7z.exe > 7z.exe
 if %errorlevel%==0  (
 echo Success!
 ) else (
 echo Downloading failed, skipping to next file (please try again later)
 )
 echo Downloading main files...
-curl https://raw.githubusercontent.com/tomtep01/Tom-s-Bootstrapper-Files/main/temp.zip > temp.zip
+curl https://raw.githubusercontent.com/tomtep01/Executor/main/files/downloader/temp.zip > temp.zip
 if %errorlevel%==0  (
 echo Success!
 ) else (
